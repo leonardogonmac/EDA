@@ -21,7 +21,7 @@ int main(void){
         }
         scanf(" %c", &begin_side);
 
-        scanf(" %s", &c);
+        scanf(" %s", c);
 
         char screen[l + 1][11];
 
