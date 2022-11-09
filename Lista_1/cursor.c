@@ -11,7 +11,7 @@ int main(){
     int helperF;
 
     char command;
-    char text[1000][1000];
+    char text[1001][1001];
 
     scanf("%d", &num_lines);
 
@@ -63,11 +63,11 @@ int main(){
     return 0;
 }
 
-int find_last_digit(char *matrix){
+int find_last_digit(char *text){
     int contador = 0;
 
     for (int j = 0; j < 1004; j++){
-        if (matrix[j] != '\0'){
+        if (text[j] != '\0'){
             contador++;
         }
         else{
