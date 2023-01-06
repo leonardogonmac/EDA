@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int* merge2(int* v1, int* v2, int l1, int r1, int l2, int r2){
+int* intercala2(int* v1, int* v2, int l1, int r1, int l2, int r2){
     int* v_ret = malloc(sizeof(int)*((r1 - l1 + 1) + (r2 - l2 + 1)));
     int i1 = l1, i2 = l2, i_ret = 0;
     // v {1 3 5 7 2 4 6 8}
@@ -30,13 +30,13 @@ int* merge2(int* v1, int* v2, int l1, int r1, int l2, int r2){
 }
 
 int* intercala4(int* v1, int* v2, int* v3, int* v4, int l1, int r1, int l2, int r2, int l3, int r3, int l4, int r4){
-    int* v1_2 = merge2(v1, v2, l1, r1, l2, r2);
-    int* v3_4 = merge2(v3, v4, l3, r3, l3, r4);
+    int* v1_2 = intercala2(v1, v2, l1, r1, l2, r2);
+    int* v3_4 = intercala2(v3, v4, l3, r3, l3, r4);
 
     int r1_2 = r1 + r2 + 1;
     int r3_4 = r3 + r4 + 1;
 
-    int* v_final = merge2(v1_2, v3_4, 0, r1_2, 0, r3_4);
+    int* v_final = intercala2(v1_2, v3_4, 0, r1_2, 0, r3_4);
 
 
 }
