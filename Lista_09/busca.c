@@ -12,7 +12,7 @@ typedef struct{
 
 void insertionsort(Item* v, int l, int r){
     for(int i = r; i > l; i--){
-        if(less(v[i].num, v[i - 1].num)){
+        if(less_votos(v[i].num, v[i - 1].num)){
             Item t = v[i];
             v[i] = v[i - 1];
             v[i - 1] = t;
@@ -25,7 +25,7 @@ void insertionsort(Item* v, int l, int r){
         Item aux = v[i];
         int j = i;
 
-        while(less(aux.num, v[j - 1].num)){
+        while(less_votos(aux.num, v[j - 1].num)){
             v[j] = v[j - 1];
             j--;
         }
@@ -42,10 +42,10 @@ int busca_bin(Item* v, int l, int r, int num){
     
     int meio = (r + l)/2;
 
-    if(less(num, v[meio].num)){
+    if(less_votos(num, v[meio].num)){
         return busca_bin(v, l, meio - 1, num);
     }
-    else if(less(v[meio].num, num)){
+    else if(less_votos(v[meio].num, num)){
         return busca_bin(v, meio + 1, r, num);
     }
     else{

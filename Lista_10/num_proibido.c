@@ -59,10 +59,10 @@ int busca_bin(int* v, int l, int r, int num){
     
     int meio = (r + l)/2;
 
-    if(less(num, v[meio])){
+    if(less_votos(num, v[meio])){
         return busca_bin(v, l, meio - 1, num);
     }
-    else if(less(v[meio], num)){
+    else if(less_votos(v[meio], num)){
         return busca_bin(v, meio + 1, r, num);
     }
     else{

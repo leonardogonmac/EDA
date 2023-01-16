@@ -16,7 +16,7 @@ void insertionsort(int* v, int l, int r){
         int aux = v[i];
         int j = i;
 
-        while(less(aux, v[j - 1])){
+        while(less_votos(aux, v[j - 1])){
             v[j] = v[j - 1];
             j--;
         }
